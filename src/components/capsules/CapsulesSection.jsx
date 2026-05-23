@@ -76,6 +76,7 @@ export default function CapsulesSection() {
                 src={IMAGES.capsulesSection}
                 alt="Appso Capsules Phone Preview"
                 className="w-full"
+                loading="lazy"
               />
             </div>
           </div>

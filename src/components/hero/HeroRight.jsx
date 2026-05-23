@@ -12,6 +12,8 @@ function HeroRight() {
             src={IMAGES.bannerTop1}
             alt="Appso Message screen"
             className="rounded-2xl shadow-2xl w-full"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
 
@@ -21,6 +23,8 @@ function HeroRight() {
             src={IMAGES.bannerTop2}
             alt="Time Capsule Message screen"
             className="rounded-2xl shadow-2xl w-full"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
       </div>

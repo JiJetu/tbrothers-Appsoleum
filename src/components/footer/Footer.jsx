@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-left">
           <div className="footer-logo-section">
             <div className="flex items-center gap-3">
-              <img src={IMAGES.logo} alt="Appsoleum" className="footer-logo" />
+              <img src={IMAGES.logo} alt="Appsoleum" className="footer-logo" loading="lazy" />
               <h3 className="footer-tagline">Appsoleum</h3>
             </div>
             <p className="footer-description">
@@ -115,6 +115,7 @@ function Footer() {
                 src={ICONS.apple}
                 alt="Apple App Store"
                 className="w-9 h-9"
+                loading="lazy"
               />
               <div className="flex flex-col">
                 <span className="text-xs text-white/70">Download on the</span>
@@ -133,6 +134,7 @@ function Footer() {
                 src={ICONS.playStore}
                 alt="Google Play Store"
                 className="w-9 h-9"
+                loading="lazy"
               />
               <div className="flex flex-col">
                 <span className="text-xs text-white/70">Download on the</span>

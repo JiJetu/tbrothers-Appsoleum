@@ -6,7 +6,7 @@ function HeroLeft() {
   return (
     <div className="flex-1 text-center lg:text-left">
       {/* Logo */}
-      <img className="size-24 mx-auto lg:mx-0" src={IMAGES.logo} alt="logo" />
+      <img className="size-24 mx-auto lg:mx-0" src={IMAGES.logo} alt="logo" loading="eager" />
 
       {/* Badge */}
       <div className="my-5">
