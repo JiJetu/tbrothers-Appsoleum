@@ -58,9 +58,9 @@ function HeroLeft() {
 
       <div className="max-w-xl">
         {/* Trusted by families section */}
-        <div className="hero-trusted-card mb-8">
+        {/* <div className="hero-trusted-card mb-8"> */}
           {/* Header with Shield Icon */}
-          <div className="flex items-start gap-3 mb-8">
+          {/* <div className="flex items-start gap-3 mb-8">
             <LuShield className="text-4xl text-primary flex-shrink-0 mt-0" />
             <div>
               <h3 className="text-white font-semibold text-xl">
@@ -70,10 +70,10 @@ function HeroLeft() {
                 {HERO_DATA.trustedSection.subtitle}
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Metrics Row */}
-          <div className="border-t border-[#2C3039] pt-4">
+          {/* <div className="border-t border-[#2C3039] pt-4">
             <div className="grid grid-cols-2 gap-0">
               {HERO_DATA.trustedSection.metrics.map((metric, index) => (
                 <div
@@ -100,8 +100,9 @@ function HeroLeft() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
+        
         {/* CTA Button */}
         <button className="hero-cta-btn w-full justify-center mb-6 py-4 text-lg font-semibold rounded-xl">
           {HERO_DATA.trustedSection.ctaButton}

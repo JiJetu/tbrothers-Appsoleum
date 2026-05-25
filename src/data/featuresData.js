@@ -1,4 +1,4 @@
-import { FiVideo, FiMic, FiCalendar, FiShield } from "react-icons/fi";
+import { FiVideo, FiMic, FiCalendar, FiShield, FiMessageSquare } from "react-icons/fi";
 
 export const FEATURES_DATA = {
   title: "Preserve Your Voice.",
@@ -25,6 +25,12 @@ export const FEATURES_DATA = {
     },
     {
       id: 4,
+      title: "Text Messages",
+      description: "A written message inside Appsoleum delivered instantly or in the future.",
+      icon: "text",
+    },
+    {
+      id: 5,
       title: "Beneficiary Protection",
       description: "Ensure your message reaches the right people securely and privately.",
       icon: "shield",
@@ -40,6 +46,8 @@ export const getIconComponent = (iconName) => {
       return FiMic;
     case "calendar":
       return FiCalendar;
+    case "text":
+      return FiMessageSquare;
     case "shield":
       return FiShield;
     default:

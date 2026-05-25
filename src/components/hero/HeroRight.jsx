@@ -1,4 +1,4 @@
-import { IMAGES } from "../../assets";
+// import { IMAGES } from "../../assets";
 import "./hero.css";
 
 function HeroRight() {
@@ -7,7 +7,7 @@ function HeroRight() {
       <div className="hero-banner-wrapper w-full max-w-[550px] lg:max-w-[650px] relative h-[500px] lg:h-[600px]">
         
         {/* First Phone - Left Bottom */}
-        <div className="hero-banner-top animate-float-up absolute bottom-20 left-0 lg:-left-8 w-[45%] lg:w-[42%] z-10">
+        {/* <div className="hero-banner-top animate-float-up absolute bottom-20 left-0 lg:-left-8 w-[45%] lg:w-[42%] z-10">
           <img
             src={IMAGES.bannerTop1}
             alt="Appso Message screen"
@@ -15,10 +15,10 @@ function HeroRight() {
             loading="eager"
             fetchpriority="high"
           />
-        </div>
+        </div> */}
 
         {/* Second Phone - Right Top */}
-        <div className="hero-banner-top animate-float-down absolute top-0 right-0 lg:-right-8 w-[45%] lg:w-[42%] z-20">
+        {/* <div className="hero-banner-top animate-float-down absolute top-0 right-0 lg:-right-8 w-[45%] lg:w-[42%] z-20">
           <img
             src={IMAGES.bannerTop2}
             alt="Time Capsule Message screen"
@@ -26,7 +26,7 @@ function HeroRight() {
             loading="eager"
             fetchpriority="high"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

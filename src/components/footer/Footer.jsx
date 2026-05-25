@@ -153,7 +153,7 @@ function Footer() {
         <div className="footer-bottom-links">
           <Link to="#">Privacy</Link>
           <Link to="#">Terms</Link>
-          <Link to="#">Cookies</Link>
+          {/* <Link to="#">Cookies</Link> */}
         </div>
       </div>
     </footer>

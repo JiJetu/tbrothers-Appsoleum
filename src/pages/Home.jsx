@@ -5,6 +5,7 @@ import MomentsSection from "../components/moments/MomentsSection";
 import CapsulesSection from "../components/capsules/CapsulesSection";
 import PreserveSection from "../components/preserve/PreserveSection";
 import FoundingMembersSection from "../components/foundingMembers/FoundingMembersSection";
+import { AppsoInterview } from "../components/interview/AppsoInterview";
 import Footer from "../components/footer/Footer";
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
       <MomentsSection />
       <CapsulesSection />
       <PreserveSection />
+      <AppsoInterview />
       <FoundingMembersSection />
       <Footer />
     </>

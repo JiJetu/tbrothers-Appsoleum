@@ -50,9 +50,9 @@ export default function MomentsSection() {
           {/* Left Content */}
           <div className="lg:sticky lg:top-24">
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-[1.1]">
-              Stay Present<br />
-              In The Moments<br />
-              <span className="text-[#FF6B1A]">Ahead.</span>
+              Stay Close.<br />
+              Even in the{" "}
+              <span className="text-[#FF6B1A]">Future.</span>
             </h2>
 
             <p className="mt-6 text-base text-gray-600 max-w-md">

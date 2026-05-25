@@ -11,6 +11,7 @@ export default {
         primary: "#FF6B1A",
         "primary-light": "#FF8A3D",
         "primary-lighter": "#FFB347",
+        "appso-orange": "#FF6B1A",
         hero: {
           dark: "#0A1628",
           navy: "#0E1F3E",
