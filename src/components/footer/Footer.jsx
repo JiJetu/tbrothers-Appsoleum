@@ -151,8 +151,8 @@ function Footer() {
       <div className="footer-bottom px-8 md:px-12 xl:px-16 py-5">
         <p className="copyright">&copy; 2026 Appsoleum. All rights reserved.</p>
         <div className="footer-bottom-links">
-          <Link to="#">Privacy</Link>
-          <Link to="#">Terms</Link>
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
           {/* <Link to="#">Cookies</Link> */}
         </div>
       </div>
