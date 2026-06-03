@@ -9,13 +9,15 @@ import {
 export const HERO_DATA = {
   badge: "Your Legacy. Your Voice. Perfectly Timed.",
   mainHeading: {
-    part1: "If you could send one message into the future...",
-    part2: "whose life would it change?",
+    part1: "If You Could Send One",
+    part2: "Message Into Future...",
+    part3: "Whose Life Would It Change?",
   },
   description: {
     intro: "Appsoleum lets you record time capsule messages by storing your",
     highlights: ["video, audio", "text"],
-    outro: "- preserving your wisdom, love and memories for the people who matter most.",
+    outro:
+      "- preserving your wisdom, love and memories for the people who matter most.",
   },
   features: [
     {

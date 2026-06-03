@@ -5,7 +5,7 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer-container px-8 md:px-12 xl:px-16">
         {/* Left Section - Logo and Tagline */}
         <div className="footer-left">

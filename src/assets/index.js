@@ -1,5 +1,6 @@
 import logo from "./images/logo.png";
-import bannerBehind from "./images/bannerBehind.jpeg";
+import bannerBehind from "./images/bannerBehind.png";
+import bannerBehindMobile from "./images/bannerBehindMobile.png";
 import bannerTop1 from "./images/banner-top-1.png";
 import bannerTop2 from "./images/banner-top-2.png";
 import apple from "./icons/apple.png";
@@ -15,11 +16,10 @@ import interviewGuided from "./images/interview-guided.png";
 import interviewAudio from "./images/interview-audio.png";
 import interviewLegacy from "./images/interview-legacy.png";
 
-
-
 export const IMAGES = {
   logo,
   bannerBehind,
+  bannerBehindMobile,
   bannerTop1,
   bannerTop2,
   gift,
@@ -31,7 +31,7 @@ export const IMAGES = {
   capsulesSection,
   interviewGuided,
   interviewAudio,
-  interviewLegacy
+  interviewLegacy,
 };
 export const ICONS = {
   apple,
