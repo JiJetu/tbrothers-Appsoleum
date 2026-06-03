@@ -78,7 +78,7 @@ const sections = [
     num: 29,
     title: "Policy Updates",
     id: "updates",
-    body: "Policy may change.",
+    body: "Policy may change. ",
   },
 ];
 
