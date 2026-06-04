@@ -15,6 +15,14 @@ import capsulesSection from "./images/capsulesSection.png";
 import interviewGuided from "./images/interview-guided.png";
 import interviewAudio from "./images/interview-audio.png";
 import interviewLegacy from "./images/interview-legacy.png";
+import mostPeople1 from "./images/mostPeople1.png";
+import mostPeople2 from "./images/mostPeople2.png";
+import mostPeople3 from "./images/mostPeople3.png";
+import featuresSection1 from "./images/featuresSection1.png";
+import featuresSection2 from "./images/featuresSection2.png";
+import featuresSection3 from "./images/featuresSection3.png";
+import yourStory from "./images/yourStory.png";
+import yourStoryMobile from "./images/yourStoryMobile.png";
 
 export const IMAGES = {
   logo,
@@ -32,6 +40,14 @@ export const IMAGES = {
   interviewGuided,
   interviewAudio,
   interviewLegacy,
+  mostPeople1,
+  mostPeople2,
+  mostPeople3,
+  featuresSection1,
+  featuresSection2,
+  featuresSection3,
+  yourStory,
+  yourStoryMobile,
 };
 export const ICONS = {
   apple,
