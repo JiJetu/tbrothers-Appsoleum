@@ -1,131 +1,74 @@
-import { LuShield } from "react-icons/lu";
-import { IMAGES, ICONS } from "../../assets";
 import { HERO_DATA, getHeroIconComponent } from "../../data/heroData";
 
 function HeroLeft() {
   return (
-    <div className="flex-1 text-center lg:text-left">
-      {/* Logo */}
-      <img className="size-24 mx-auto lg:mx-0" src={IMAGES.logo} alt="logo" loading="eager" />
-
+    <div className="flex-1 text-left flex flex-col justify-center gap-3">
       {/* Badge */}
-      <div className="my-5">
-        <p className="font-semibold text-primary">{HERO_DATA.badge}</p>
+      <div className="mb-4">
+        <p className="text-xs font-bold tracking-widest text-[#FF6B1A] uppercase">
+          {HERO_DATA.badge}
+        </p>
       </div>
 
       {/* Main Heading */}
-      <div className="hero-text-shadow">
-        <h1 className="font-inter text-2xl md:text-3xl lg:text-[3rem] font-semibold tracking-tight text-white mb-6 flex flex-col">
-          <span className="leading-none">
-            {HERO_DATA.mainHeading.part1} <br />
-          </span>
-
-          <span className="text-primary mt-3">
-            {HERO_DATA.mainHeading.part2}
-          </span>
+      <div className="hero-text-shadow mb-6">
+        <h1
+          className="font-inter 
+                text-2xl md:text-3xl lg:text-[40px] xl:text-[50px] 
+                font-bold tracking-tight text-white 
+                flex flex-col 
+                gap-2 md:gap-0 lg:gap-5 
+                leading-[1.05]"
+        >
+          <span>{HERO_DATA.mainHeading.part1}</span>
+          <span>{HERO_DATA.mainHeading.part2}</span>
+          <span className="text-[#FF6B1A]">{HERO_DATA.mainHeading.part3}</span>
         </h1>
       </div>
 
       {/* Description */}
-      <p className="text-white/55 text-base sm:text-lg lg:text-xl leading-relaxed mb-14 max-w-2xl mx-auto lg:mx-0">
+      <p className="text-white/60 text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8 max-w-2xl mx-auto md:mx-0">
         {HERO_DATA.description.intro}
-        <span className="text-primary font-medium">
+        <span className="text-[#FF6B1A] font-semibold">
           {" "}
           {HERO_DATA.description.highlights[0]}
         </span>{" "}
         and{" "}
-        <span className="text-primary font-medium">
+        <span className="text-[#FF6B1A] font-semibold">
           {HERO_DATA.description.highlights[1]}
         </span>{" "}
         {HERO_DATA.description.outro}
       </p>
 
       {/* Feature Cards Grid */}
-      <div className="hero-features-grid mb-14 mx-auto lg:mx-0">
+      <div className="grid grid-cols-2 gap-3 mb-8 max-w-2xl mx-auto md:mx-0">
         {HERO_DATA.features.map((feature) => {
           const IconComponent = getHeroIconComponent(feature.icon);
           return (
-            <div key={feature.id} className="space-y-3">
-              <div className="p-4 border border-primary rounded-2xl inline-flex items-center justify-center">
-                <IconComponent className="text-2xl text-primary" />
+            <div
+              key={feature.id}
+              className="flex flex-col md:flex-row md:items-center gap-4 p-4 md:p-2 lg:p-4 rounded-[20px] border border-white/10 bg-white/[0.02] backdrop-blur-md hover:bg-white/[0.04] transition-all duration-300"
+            >
+              <div className="w-12 h-12 md:w-8 md:h-8 lg:w-12 lg:h-12 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center flex-shrink-0">
+                <IconComponent className="text-xl text-[#FF6B1A]" />
               </div>
-              <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
-              <p className="text-white/60 text-xs">{feature.description}</p>
+              <div className="text-left">
+                <h3 className="text-white font-semibold text-base mb-0.5 leading-tight">
+                  {feature.title}
+                </h3>
+                <p className="text-white/60 text-xs leading-normal">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           );
         })}
       </div>
 
-      <div className="max-w-xl">
-        {/* Trusted by families section */}
-        {/* <div className="hero-trusted-card mb-8"> */}
-          {/* Header with Shield Icon */}
-          {/* <div className="flex items-start gap-3 mb-8">
-            <LuShield className="text-4xl text-primary flex-shrink-0 mt-0" />
-            <div>
-              <h3 className="text-white font-semibold text-xl">
-                {HERO_DATA.trustedSection.title}
-              </h3>
-              <p className="text-white/60 text-sm">
-                {HERO_DATA.trustedSection.subtitle}
-              </p>
-            </div>
-          </div> */}
-
-          {/* Metrics Row */}
-          {/* <div className="border-t border-[#2C3039] pt-4">
-            <div className="grid grid-cols-2 gap-0">
-              {HERO_DATA.trustedSection.metrics.map((metric, index) => (
-                <div
-                  key={metric.id}
-                  className={`py-2 ${
-                    index === 0 ? "pr-8" : "pl-8 border-l border-[#2C3039]"
-                  }`}
-                >
-                  {metric.showStars ? (
-                    <>
-                      <div className="flex items-center gap-2 mb-1 text-primary">
-                        <span className="text-2xl leading-none">★★★★★</span>
-                        <p className="text-2xl font-bold leading-none">
-                          {metric.value}
-                        </p>
-                      </div>
-                    </>
-                  ) : (
-                    <p className="text-4xl font-bold text-primary mb-1 leading-tight">
-                      {metric.value}
-                    </p>
-                  )}
-                  <p className="text-xs text-white/50">{metric.label}</p>
-                </div>
-              ))}
-            </div>
-          </div> */}
-        {/* </div> */}
-        
-        {/* CTA Button */}
-        <button className="hero-cta-btn w-full justify-center mb-6 py-4 text-lg font-semibold rounded-xl">
-          {HERO_DATA.trustedSection.ctaButton}
-        </button>
-
-        {/* App Store Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <button className="hero-store-btn flex-1">
-            <img src={ICONS.apple} alt="Apple" className="w-10 h-10" />
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-xs">Download on the</span>
-              <span className="font-bold text-xl">App Store</span>
-            </div>
-          </button>
-          <button className="hero-store-btn flex-1">
-            <img src={ICONS.playStore} alt="Google Play" className="w-10 h-10" />
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-xs">Download on the</span>
-              <span className="font-bold text-xl">Google Play</span>
-            </div>
-          </button>
-        </div>
-      </div>
+      {/* CTA Button */}
+      <button className="w-full sm:w-fit mx-auto md:mx-0 bg-gradient-to-r from-[#FF6B1A] to-[#FF8A3D] hover:from-[#FF8A3D] hover:to-[#FF6B1A] text-white font-semibold px-8 py-3.5 md:px-10 md:py-4 rounded-[14px] shadow-lg shadow-[#FF6B1A]/20 transition-all duration-300 hover:scale-105 active:scale-95 text-base flex justify-center items-center">
+        {HERO_DATA.trustedSection.ctaButton}
+      </button>
     </div>
   );
 }

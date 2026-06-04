@@ -1,5 +1,6 @@
 import { Gift, GraduationCap, Heart, BookOpen, Flame, Users } from 'lucide-react';
 import { IMAGES } from '../../assets';
+import { useState, useRef, useEffect } from 'react';
 
 const moments = [
   {
@@ -41,38 +42,64 @@ const moments = [
 ];
 
 export default function MomentsSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const sliderRef = useRef(null);
+
+  // Auto-slide functionality for mobile
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (sliderRef.current) {
+        const slider = sliderRef.current;
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+        // If we reached the end, go back to start
+        if (slider.scrollLeft >= maxScrollLeft - 10) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          // Slide one full width
+          slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+        }
+      }
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const scrollLeft = sliderRef.current.scrollLeft;
+    const slideWidth = sliderRef.current.clientWidth;
+    const newIndex = Math.round(scrollLeft / slideWidth);
+    setActiveIndex(newIndex);
+  };
+
   return (
-    <section className="py-20 bg-white text-[#0A1428]">
+    <section className="py-20 bg-white text-[#0A1428]" id='how-it-works'>
       <div className="px-8 sm:px-12 xl:px-16">
         
-        <div className="grid lg:grid-cols-3 lg:gap-12 items-start">
-          
-          {/* Left Content */}
-          <div className="lg:sticky lg:top-24">
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-[1.1]">
-              Stay Close.<br />
-              Even in the{" "}
-              <span className="text-[#FF6B1A]">Future.</span>
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 lg:mb-16 gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.1] text-[#0A1428]">
+              Stay Close. Even in the <span className="text-[#FF6B1A]">Future.</span>
             </h2>
-
-            <p className="mt-6 text-base text-gray-600 max-w-md">
+            <p className="mt-4 text-base text-gray-600 max-w-lg">
               Life moves forward, but your love, wisdom, and encouragement can stay with them. 
               Send the right message for life's most meaningful moments.
             </p>
-
-            <div className="mt-10 flex items-center gap-4">
-              <div className="w-11 h-11 rounded-2xl border-2 border-[#FF6B1A] flex items-center justify-center flex-shrink-0">
-                <Heart className="w-6 h-6 text-[#FF6B1A]" />
-              </div>
-              <div>
-                <p className="font-semibold text-lg">Messages that matter.</p>
-                <p className="text-gray-500">Delivered when it matters most.</p>
-              </div>
+          </div>
+          
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full border border-[#FF6B1A] flex items-center justify-center flex-shrink-0 bg-white">
+              <Heart className="w-5 h-5 text-[#FF6B1A]" />
+            </div>
+            <div>
+              <p className="font-semibold text-[15px] text-[#0A1428] leading-tight">Messages that matter.</p>
+              <p className="text-gray-500 text-sm">Delivered when it matters most.</p>
             </div>
           </div>
+        </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 col-span-2">
+        {/* Desktop Cards Grid (3 columns) */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {moments.map((item, index) => (
               <div 
                 key={index}
@@ -107,6 +134,62 @@ export default function MomentsSection() {
               </div>
             ))}
           </div>
+
+          {/* Mobile Cards Slider */}
+          <div className="md:hidden mt-8">
+            <div 
+              ref={sliderRef}
+              onScroll={handleScroll}
+              className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8"
+            >
+              {moments.map((item, index) => (
+                <div 
+                  key={index}
+                  className="w-full flex-shrink-0 snap-center px-2"
+                >
+                  <div className="bg-white rounded-[32px] overflow-hidden shadow-lg border border-gray-100">
+                    {/* Image */}
+                    <div className="relative h-56 overflow-hidden bg-gray-200">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Icon */}
+                    <div className="flex justify-center -mt-8 relative z-10">
+                      <div className="w-16 h-16 bg-[#FF6B1A] rounded-full flex items-center justify-center shadow-md">
+                        <item.icon className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="px-6 pb-8 pt-4 text-center">
+                      <h3 className="text-[22px] font-semibold mb-3 text-[#0A1428]">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-sm">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination Dots */}
+            <div className="flex justify-center items-center gap-2 mt-2">
+              {moments.map((_, index) => (
+                <div 
+                  key={index}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    activeIndex === index ? "w-6 bg-[#FF6B1A]" : "w-2 bg-[#FF6B1A]/20"
+                  }`}
+                />
+              ))}
+            </div>
         </div>
       </div>
     </section>

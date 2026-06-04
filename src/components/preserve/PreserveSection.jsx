@@ -54,7 +54,7 @@ const preserveItems = [
 
 export default function PreserveSection() {
   return (
-    <section className="py-20 bg-[#0A1929] text-white">
+    <section className="py-20 bg-[#0A1929] text-white" id="preserve">
       <div className="px-8 sm:px-12 xl:px-16">
         <div className="bg-[#0D2440] rounded-3xl p-10 md:p-16">
           {/* Title & Subtitle */}

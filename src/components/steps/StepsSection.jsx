@@ -29,7 +29,7 @@ const steps = [
 
 export default function StepsSection() {
   return (
-    <section className="py-20 bg-[#0A1428] text-white">
+    <section className="py-20 bg-[#0A1428] text-white" id="how-it-works">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Title */}
