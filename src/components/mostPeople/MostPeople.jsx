@@ -26,12 +26,12 @@ function MostPeople() {
         <p className="text-[#FF6B1A] font-bold text-[11px] uppercase tracking-[0.2em] mb-4">
           RECORD. SCHEDULE. DELIVER
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold mb-6 leading-[1.2]">
+        <h2 className="text-3xl lg:text-[44px] font-bold mb-6 leading-[1.2]">
           Most People Leave Behind Possessions.
           <br className="hidden md:block" />
           Few Leave Behind Presence.
         </h2>
-        <p className="text-gray-400 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
+        <p className="text-gray-400 text-sm lg:text-base max-w-3xl mx-auto leading-relaxed">
           Life is filled with moments you'll never want to miss—a wedding day, a
           graduation, the birth of a child, or a time when someone you love
           simply needs to hear your voice.
@@ -87,7 +87,7 @@ function MostPeople() {
 
         {/* Bottom Card (Centered in Desktop) */}
         <div className="md:col-span-2 flex justify-center">
-          <div className="bg-[#031534] rounded-[32px] overflow-hidden border border-white/5 relative group h-[450px] md:h-[600px] w-full md:w-[calc(50%-16px)]">
+          <div className="bg-[#031534] rounded-[32px] overflow-hidden border border-white/5 relative group h-[450px] md:h-[550px] lg:h-[600px] w-full lg:w-[calc(50%-16px)]">
             {/* Background Ellipse Glow */}
             <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
@@ -103,7 +103,7 @@ function MostPeople() {
             <img
               src={cards[2].image}
               alt={cards[2].title}
-              className="absolute inset-0 w-full h-full object-contain z-10"
+              className="absolute inset-0 w-full h-full object-contain object-bottom z-10"
             />
 
             {/* Bottom Gradient Overlay (Rectangle 1236) */}

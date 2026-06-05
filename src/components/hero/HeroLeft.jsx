@@ -14,10 +14,10 @@ function HeroLeft() {
       <div className="hero-text-shadow mb-6">
         <h1
           className="font-inter 
-                text-2xl md:text-3xl lg:text-[40px] xl:text-[50px] 
+                text-2xl lg:text-[40px] xl:text-[50px] 
                 font-bold tracking-tight text-white 
                 flex flex-col 
-                gap-2 md:gap-0 lg:gap-5 
+                gap-2 lg:gap-5 
                 leading-[1.05]"
         >
           <span>{HERO_DATA.mainHeading.part1}</span>
@@ -27,7 +27,7 @@ function HeroLeft() {
       </div>
 
       {/* Description */}
-      <p className="text-white/60 text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8 max-w-2xl mx-auto md:mx-0">
+      <p className="text-white/60 text-sm lg:text-lg leading-relaxed mb-6 md:mb-8 max-w-2xl mx-auto md:mx-0">
         {HERO_DATA.description.intro}
         <span className="text-[#FF6B1A] font-semibold">
           {" "}
@@ -53,7 +53,7 @@ function HeroLeft() {
                 <IconComponent className="text-xl text-[#FF6B1A]" />
               </div>
               <div className="text-left">
-                <h3 className="text-white font-semibold text-base mb-0.5 leading-tight">
+                <h3 className="text-white font-semibold text-base md:text-sm lg:text-base mb-0.5 leading-tight">
                   {feature.title}
                 </h3>
                 <p className="text-white/60 text-xs leading-normal">
@@ -66,7 +66,7 @@ function HeroLeft() {
       </div>
 
       {/* CTA Button */}
-      <button className="w-full sm:w-fit mx-auto md:mx-0 bg-gradient-to-r from-[#FF6B1A] to-[#FF8A3D] hover:from-[#FF8A3D] hover:to-[#FF6B1A] text-white font-semibold px-8 py-3.5 md:px-10 md:py-4 rounded-[14px] shadow-lg shadow-[#FF6B1A]/20 transition-all duration-300 hover:scale-105 active:scale-95 text-base flex justify-center items-center">
+      <button className="w-full sm:w-fit mx-auto md:mx-0 bg-gradient-to-r from-[#FF6B1A] to-[#FF8A3D] hover:from-[#FF8A3D] hover:to-[#FF6B1A] text-white font-semibold px-8 py-3.5 md:px-10 md:py-4 rounded-[14px] shadow-lg shadow-[#FF6B1A]/20 transition-all duration-300 hover:scale-105 active:scale-95 text-base md:text-sm lg:text-base flex justify-center items-center">
         {HERO_DATA.trustedSection.ctaButton}
       </button>
     </div>

@@ -83,12 +83,12 @@ export default function FeaturesSection() {
       <div className="px-8 sm:px-12 xl:px-16 max-w-[1400px] mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#1E293B]">
+          <h2 className="text-3xl lg:text-5xl font-semibold leading-tight text-[#1E293B]">
             What You Can Preserve
             <br />
             <span className="text-[#FF6B1A]">In Appso Capsule</span>
           </h2>
-          <p className="mt-4 text-gray-500 text-sm md:text-base max-w-xl mx-auto tracking-wide">
+          <p className="mt-4 text-gray-500 text-sm lg:text-base max-w-xl mx-auto tracking-wide">
             Every memory. Every moment. Every part of your story.
           </p>
           <div className="flex justify-center mt-6">
