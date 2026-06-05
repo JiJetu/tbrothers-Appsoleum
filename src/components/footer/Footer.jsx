@@ -20,10 +20,8 @@ export default function Footer() {
       { label: "Pricing", targetId: "pricing" },
     ],
     support: [
-      { label: "Help Center", targetId: "help" },
-      { label: "Contact Us", targetId: "contact" },
-      { label: "Privacy Policy", targetId: "privacy" },
-      { label: "Terms of Service", targetId: "terms" },
+      { label: "Privacy Policy", path: "/privacy" },
+      { label: "Terms of Service", path: "/terms" },
     ],
   };
 
@@ -84,13 +82,12 @@ export default function Footer() {
               <ul className="flex flex-col gap-4">
                 {footerLinks.support.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={`#${link.targetId}`}
-                      onClick={(e) => handleScroll(e, link.targetId)}
+                    <Link
+                      to={link.path}
                       className="text-white/70 hover:text-white transition-colors text-[14px]"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
