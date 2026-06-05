@@ -78,10 +78,10 @@ export default function MomentsSection() {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 lg:mb-16 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[1.1] text-[#0A1428]">
+            <h2 className="text-3xl lg:text-[44px] font-bold leading-[1.1] text-[#0A1428]">
               Stay Close. Even in the <span className="text-[#FF6B1A]">Future.</span>
             </h2>
-            <p className="mt-4 text-base text-gray-600 max-w-lg">
+            <p className="mt-4 text-sm lg:text-base text-gray-600 max-w-lg">
               Life moves forward, but your love, wisdom, and encouragement can stay with them. 
               Send the right message for life's most meaningful moments.
             </p>
