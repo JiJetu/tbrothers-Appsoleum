@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Appsoleum - Preserve Your Memories Forever</title>
+        <title>Appsoleum</title>
         <meta name="description" content="Preserve your memories forever with Appsoleum. Capture, share, and protect your most precious moments for generations to come." />
         <meta name="keywords" content="memories, preserve, appsoleum, legacy, family, photos, stories" />
         <meta property="og:title" content="Appsoleum - Preserve Your Memories Forever" />
