@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import {
   LegalLayout,
   LegalSection,
@@ -84,72 +85,81 @@ const sections = [
 
 export function PrivacyPage() {
   return (
-    <LegalLayout
-      badge="Privacy Policy"
-      title="Privacy Policy"
-      description="How we collect, use, and protect your personal information at Appsoleum."
-      effectiveDate="April 7, 2026"
-      lastUpdated="April 7, 2026"
-    >
-      <div className="flex gap-10 max-w-6xl mx-auto">
-        <TocSidebar
-          title="On This Page"
-          items={sections.map((s) => ({
-            num: s.num,
-            title: s.title,
-            id: s.id,
-          }))}
-        />
+    <>
+      <Helmet>
+        <title>Privacy Policy - Appsoleum</title>
+        <meta name="description" content="Learn how Appsoleum collects, uses, and protects your personal information." />
+        <meta property="og:title" content="Privacy Policy - Appsoleum" />
+        <meta property="og:description" content="Learn how Appsoleum collects, uses, and protects your personal information." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <LegalLayout
+        badge="Privacy Policy"
+        title="Privacy Policy"
+        description="How we collect, use, and protect your personal information at Appsoleum."
+        effectiveDate="April 7, 2026"
+        lastUpdated="April 7, 2026"
+      >
+        <div className="flex gap-10 max-w-6xl mx-auto">
+          <TocSidebar
+            title="On This Page"
+            items={sections.map((s) => ({
+              num: s.num,
+              title: s.title,
+              id: s.id,
+            }))}
+          />
 
-        <div className="flex-1 min-w-0">
-          {/* Intro callout */}
-          <div className="bg-gradient-to-br from-appso-orange/10 to-transparent border border-appso-orange/20 rounded-2xl p-6 mb-12 flex gap-4">
-            <div className="shrink-0 w-10 h-10 rounded-lg bg-appso-orange/20 flex items-center justify-center text-appso-orange">
-              <Lock size={20} />
+          <div className="flex-1 min-w-0">
+            {/* Intro callout */}
+            <div className="bg-gradient-to-br from-appso-orange/10 to-transparent border border-appso-orange/20 rounded-2xl p-6 mb-12 flex gap-4">
+              <div className="shrink-0 w-10 h-10 rounded-lg bg-appso-orange/20 flex items-center justify-center text-appso-orange">
+                <Lock size={20} />
+              </div>
+              <div>
+                <h3 className="text-white font-semibold mb-1">
+                  Your privacy matters
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  We treat your memories, voice, and messages with the highest
+                  standard of security. This policy explains how your information
+                  is handled.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-white font-semibold mb-1">
-                Your privacy matters
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                We treat your memories, voice, and messages with the highest
-                standard of security. This policy explains how your information
-                is handled.
-              </p>
+
+            {sections.map((section) => (
+              <LegalSection
+                key={section.id}
+                id={section.id}
+                num={section.num}
+                title={section.title}
+              >
+                <p>{section.body}</p>
+              </LegalSection>
+            ))}
+
+            {/* Footer nav */}
+            <div className="mt-16 pt-10 border-t border-slate-800 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+              <Link
+                to="/terms"
+                className="inline-flex items-center gap-2 text-slate-400 hover:text-appso-orange transition-colors font-medium text-sm"
+              >
+                <ArrowLeft size={16} />
+                Back to Terms & Conditions
+              </Link>
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 bg-appso-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors shadow-lg shadow-appso-orange/20"
+              >
+                Return to Home
+              </Link>
             </div>
+
+            <ContactCard />
           </div>
-
-          {sections.map((section) => (
-            <LegalSection
-              key={section.id}
-              id={section.id}
-              num={section.num}
-              title={section.title}
-            >
-              <p>{section.body}</p>
-            </LegalSection>
-          ))}
-
-          {/* Footer nav */}
-          <div className="mt-16 pt-10 border-t border-slate-800 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-            <Link
-              to="/terms"
-              className="inline-flex items-center gap-2 text-slate-400 hover:text-appso-orange transition-colors font-medium text-sm"
-            >
-              <ArrowLeft size={16} />
-              Back to Terms & Conditions
-            </Link>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 bg-appso-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors shadow-lg shadow-appso-orange/20"
-            >
-              Return to Home
-            </Link>
-          </div>
-
-          <ContactCard />
         </div>
-      </div>
-    </LegalLayout>
+      </LegalLayout>
+    </>
   );
 }
